@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ダッシュボード | PARK</title>
+    <!-- Use standard highly legible sans-serif stack instead of a customized font for a native app feel -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="app-layout">
+    <!-- Application Header (Global Navigation) -->
+    <header class="app-header">
+        <div class="header-left">
+            <div class="app-logo">PARK</div>
+            <nav class="global-nav">
+                <a href="index.html" class="nav-item active">ダッシュボード</a>
+                <a href="projects.html" class="nav-item">プロジェクト</a>
+                <span class="nav-item nav-item-disabled">提案資料作成</span>
+            </nav>
+        </div>
+
+        <div class="header-right">
+            <div class="search-bar">
+                <i data-lucide="search" class="icon-sm text-muted"></i>
+                <input type="text" placeholder="キーワードで課題を検索...">
+            </div>
+
+            <button class="icon-btn" title="通知">
+                <i data-lucide="bell" class="icon-md"></i>
+                <span class="notification-badge">3</span>
+            </button>
+
+            <button class="btn btn-primary btn-sm add-issue-btn">
+                <i data-lucide="plus" class="icon-sm"></i>
+                課題の追加
+            </button>
+
+            <div class="user-profile">
+                <!-- Using a colored circle with initial as a placeholder for user avatar -->
+                <div class="avatar avatar-sm bg-indigo">T</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Project Breadcrumb / Context Bar -->
+    <div class="context-bar">
+        <div class="container-fluid flex-between">
+            <div class="breadcrumbs">
+                <span class="company-name">株式会社ダミーカンパニー</span>
+                <i data-lucide="chevron-right" class="icon-xs text-muted"></i>
+                <span class="current-page">ダッシュボード</span>
+            </div>
+            <div class="context-actions">
+                <button class="btn btn-outline btn-sm">表示設定</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Workspace -->
+    <main class="main-workspace container-fluid">
+        <div class="workspace-grid">
+
+            <!-- Left Column: Main Content -->
+            <div class="main-column">
+
+                <!-- My Tasks Panel -->
+                <section class="panel">
+                    <div class="panel-header">
+                        <h2 class="panel-title">
+                            <i data-lucide="check-square" class="icon-sm text-blue"></i>
+                            自分の課題
+                        </h2>
+                        <div class="panel-actions">
+                            <div class="tabs">
+                                <button class="tab active">未完了 (8)</button>
+                                <button class="tab">すべて</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-body p-0">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th width="15%">キー</th>
+                                    <th width="45%">件名</th>
+                                    <th width="15%">状態</th>
+                                    <th width="15%">期限日</th>
+                                    <th width="10%">優先度</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="clickable-row">
+                                    <td><a href="#" class="issue-key">PRJ-102</a></td>
+                                    <td><a href="#" class="issue-subject">トップページのデザイン改修</a></td>
+                                    <td><span class="status-badge bg-blue-subtle text-blue">処理中</span></td>
+                                    <td class="text-danger">今日</td>
+                                    <td><i data-lucide="arrow-up" class="icon-sm text-danger" title="高"></i></td>
+                                </tr>
+                                <tr class="clickable-row">
+                                    <td><a href="#" class="issue-key">PRJ-108</a></td>
+                                    <td><a href="#" class="issue-subject">API連携の仕様書作成</a></td>
+                                    <td><span class="status-badge bg-gray-subtle text-gray">未対応</span></td>
+                                    <td>明日</td>
+                                    <td><i data-lucide="minus" class="icon-sm text-warning" title="中"></i></td>
+                                </tr>
+                                <tr class="clickable-row">
+                                    <td><a href="#" class="issue-key">PRJ-095</a></td>
+                                    <td><a href="#" class="issue-subject">ログイン画面のバリデーションエラー修正</a></td>
+                                    <td><span class="status-badge bg-blue-subtle text-blue">処理中</span></td>
+                                    <td>2026/02/28</td>
+                                    <td><i data-lucide="arrow-up" class="icon-sm text-danger" title="高"></i></td>
+                                </tr>
+                                <tr class="clickable-row">
+                                    <td><a href="#" class="issue-key">MKT-042</a></td>
+                                    <td><a href="#" class="issue-subject">Q1マーケティング施策のレポート作成</a></td>
+                                    <td><span class="status-badge bg-green-subtle text-green">レビュー中</span></td>
+                                    <td>2026/03/05</td>
+                                    <td><i data-lucide="minus" class="icon-sm text-warning" title="中"></i></td>
+                                </tr>
+                                <tr class="clickable-row">
+                                    <td><a href="#" class="issue-key">PRJ-112</a></td>
+                                    <td><a href="#" class="issue-subject">サーバーの定期メンテナンス実施</a></td>
+                                    <td><span class="status-badge bg-gray-subtle text-gray">未対応</span></td>
+                                    <td>2026/03/10</td>
+                                    <td><i data-lucide="arrow-down" class="icon-sm text-teal" title="低"></i></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="panel-footer">
+                        <a href="#" class="view-all-link">課題をさらに表示</a>
+                    </div>
+                </section>
+
+                <!-- Recent Updates Timeline -->
+                <section class="panel mt-4">
+                    <div class="panel-header">
+                        <h2 class="panel-title">
+                            <i data-lucide="activity" class="icon-sm text-green"></i>
+                            最近の更新
+                        </h2>
+                    </div>
+                    <div class="panel-body">
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-avatar">
+                                    <div class="avatar avatar-xs bg-pink">S</div>
+                                </div>
+                                <div class="timeline-content">
+                                    <div class="timeline-header">
+                                        <span class="user-name">Sato Kentaro</span> が <a href="#"
+                                            class="issue-key">PRJ-102</a> のステータスを更新しました
+                                        <span class="timestamp">10分前</span>
+                                    </div>
+                                    <div class="timeline-body">
+                                        状態: <span class="strike">未対応</span> → <strong>処理中</strong>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-avatar">
+                                    <div class="avatar avatar-xs bg-teal">Y</div>
+                                </div>
+                                <div class="timeline-content">
+                                    <div class="timeline-header">
+                                        <span class="user-name">Yamada Taro</span> が <a href="#"
+                                            class="issue-key">MKT-042</a> にコメントしました
+                                        <span class="timestamp">1時間前</span>
+                                    </div>
+                                    <div class="timeline-body comment-box">
+                                        「ドラフトが完成しました。ご確認をお願いします。」
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-avatar">
+                                    <i data-lucide="file-plus" class="icon-sm text-blue"></i>
+                                </div>
+                                <div class="timeline-content">
+                                    <div class="timeline-header">
+                                        <span class="user-name">システム</span> が新しい課題 <a href="#"
+                                            class="issue-key">PRJ-113</a> を作成しました
+                                        <span class="timestamp">昨日 18:30</span>
+                                    </div>
+                                    <div class="timeline-body">
+                                        障害報告: 「パスワードリセットメールが届かない」
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- Right Sidebar Column -->
+            <aside class="sidebar-column">
+
+                <!-- Matching Site Banner Widget -->
+                <section class="widget widget-accent widget-matching">
+                    <div class="widget-body">
+                        <div class="widget-icon">
+                            <i data-lucide="users" class="icon-lg"></i>
+                        </div>
+                        <h3 class="widget-title">PARK マッチング</h3>
+                        <p class="text-sm text-secondary mt-2 mb-0">社内の案件と最適な人材をスピーディにマッチングさせましょう。</p>
+                        <a href="matching.html" class="btn btn-primary block text-center mt-3">人材を探す <i
+                                data-lucide="external-link" class="icon-xs ml-1"></i></a>
+                    </div>
+                </section>
+
+                <!-- Recent Projects List -->
+                <section class="panel mt-4">
+                    <div class="panel-header border-none pb-0">
+                        <h3 class="side-panel-title">プロジェクト</h3>
+                    </div>
+                    <div class="panel-body p-0">
+                        <ul class="project-list">
+                            <li>
+                                <a href="#" class="project-item">
+                                    <div class="project-icon bg-blue text-white"><i data-lucide="layout"
+                                            class="icon-xs"></i></div>
+                                    <div class="project-info">
+                                        <span class="project-name">社内システムリプレイス</span>
+                                        <span class="project-key">PRJ</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="project-item">
+                                    <div class="project-icon bg-green text-white"><i data-lucide="trending-up"
+                                            class="icon-xs"></i></div>
+                                    <div class="project-info">
+                                        <span class="project-name">Q1 マーケティング施策</span>
+                                        <span class="project-key">MKT</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="project-item">
+                                    <div class="project-icon bg-orange text-white"><i data-lucide="headphones"
+                                            class="icon-xs"></i></div>
+                                    <div class="project-info">
+                                        <span class="project-name">カスタマーサポート管理</span>
+                                        <span class="project-key">CS</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Saved Filters/Searches -->
+                <section class="panel mt-4">
+                    <div class="panel-header border-none pb-0">
+                        <h3 class="side-panel-title">保存された検索条件</h3>
+                    </div>
+                    <div class="panel-body">
+                        <ul class="filter-list">
+                            <li><a href="#"><i data-lucide="filter" class="icon-xs text-muted"></i> 今週期限の課題</a></li>
+                            <li><a href="#"><i data-lucide="filter" class="icon-xs text-muted"></i> 自分が報告した課題</a></li>
+                            <li><a href="#"><i data-lucide="filter" class="icon-xs text-muted"></i> 高優先度のバグ</a></li>
+                        </ul>
+                    </div>
+                </section>
+
+            </aside>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

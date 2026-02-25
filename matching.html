@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PARK マッチング - 人材を探す</title>
+    <!-- Use the common style.css -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="light-mode matching-page-body">
+
+    <!-- Header specifically for Matching -->
+    <header class="app-header">
+        <div class="header-left">
+            <div class="logo">PARK</div>
+            <nav class="global-nav">
+                <!-- Restricting nav items as requested -->
+                <a href="#" class="nav-item active">人材をさがす</a>
+                <a href="#" class="nav-item">案件作成</a>
+                <a href="#" class="nav-item">マッチング管理</a>
+                <a href="#" class="nav-item">チャット</a>
+            </nav>
+        </div>
+        <div class="header-right">
+            <div class="search-bar">
+                <i data-lucide="search" class="icon-sm text-muted"></i>
+                <input type="text" placeholder="キーワードでワーカーを検索...">
+            </div>
+            <button class="icon-button"><i data-lucide="bell" class="icon-sm"></i><span
+                    class="notification-badge">3</span></button>
+            <div class="user-profile">
+                <div class="avatar avatar-sm bg-blue">T</div>
+            </div>
+        </div>
+    </header>
+
+    <main class="matching-main">
+        <div class="matching-container">
+
+            <!-- Search Control Area -->
+            <div class="matching-search-wrapper">
+                <div class="matching-search-field">
+                    <label>スキル</label>
+                    <input type="text" placeholder="選択してください">
+                </div>
+                <div class="matching-search-field">
+                    <label>キーワード</label>
+                    <input type="text" placeholder="Type here...">
+                </div>
+                <button class="btn-matching-search"><i data-lucide="search"></i> 検索</button>
+            </div>
+
+            <!-- Category: 注目されているワーカー -->
+            <section class="worker-section">
+                <div class="section-header">
+                    <h2 class="section-title">注目されているワーカー</h2>
+                </div>
+                <div class="worker-grid">
+                    <!-- Worker 1 -->
+                    <div class="worker-card">
+                        <div class="worker-card-top header-bg-blue"></div>
+                        <i data-lucide="star" class="worker-star"></i>
+                        <div class="worker-avatar-wrapper">
+                            <img src="https://i.pravatar.cc/150?img=11" alt="Sekiguchi" class="worker-avatar-img">
+                        </div>
+                        <div class="worker-info">
+                            <div class="worker-name">関口 茂</div>
+                            <div class="worker-role">PARK事業部<br>新規事業開発部室</div>
+                            <div class="worker-tags">
+                                <span class="worker-tag">Instagram</span>
+                                <span class="worker-tag">ChatGPT</span>
+                                <span class="worker-tag">CRM管理</span>
+                            </div>
+                            <div class="worker-message">神業で作業できることは自社サービス...</div>
+                        </div>
+                    </div>
+
+                    <!-- Worker 2 -->
+                    <div class="worker-card">
+                        <div class="worker-card-top header-bg-purple"></div>
+                        <i data-lucide="star" class="worker-star"></i>
+                        <div class="worker-avatar-wrapper">
+                            <!-- Placeholder avatar similar to tennis ball -->
+                            <div class="worker-avatar-img"
+                                style="background: url('https://images.unsplash.com/photo-1599552683573-9dc48255fe85?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80') center/cover;">
+                            </div>
+                        </div>
+                        <div class="worker-info">
+                            <div class="worker-name">清水 俊昭</div>
+                            <div class="worker- উল্লেখিত-role">システム統括部<br>担当: 立案・PR</div>
+                            <div class="worker-tags">
+                                <span class="worker-tag">kintone</span>
+                                <span class="worker-tag">slack</span>
+                                <span class="worker-tag">WordPress</span>
+                            </div>
+                            <div class="worker-message">全社的にクロスセル、アップセルに取り組みを推進させていきましょう！</div>
+                        </div>
+                    </div>
+
+                    <!-- Worker 3 -->
+                    <div class="worker-card">
+                        <div class="worker-card-top header-bg-indigo"></div>
+                        <i data-lucide="star" class="worker-star"></i>
+                        <div class="worker-avatar-wrapper">
+                            <div class="worker-avatar-img"
+                                style="background: #e2e8f0; display: flex; align-items: center; justify-content: center;">
+                                <i data-lucide="user" style="color: #94a3b8; width: 40px; height: 40px;"></i></div>
+                        </div>
+                        <div class="worker-info">
+                            <div class="worker-name">萩原 菜穂子</div>
+                            <div class="worker-role">webマーケティング<br>マーケター</div>
+                            <div class="worker-tags">
+                                <span class="worker-tag">CRM運用</span>
+                                <span class="worker-tag">ChatGPT</span>
+                            </div>
+                            <div class="worker-message">よろしくお願いいたします。</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Category: 受注経験が多いワーカー -->
+            <section class="worker-section">
+                <div class="section-header">
+                    <h2 class="section-title">受注経験が多いワーカー</h2>
+                </div>
+                <div class="worker-grid">
+                    <!-- Worker 4 -->
+                    <div class="worker-card">
+                        <div class="worker-card-top header-bg-blue"></div>
+                        <i data-lucide="star" class="worker-star"></i>
+                        <div class="worker-avatar-wrapper">
+                            <img src="https://i.pravatar.cc/150?img=12" alt="Takahashi" class="worker-avatar-img">
+                        </div>
+                        <div class="worker-info">
+                            <div class="worker-name">高橋 隼斗</div>
+                            <div class="worker-role">PARK事業部<br>カスタマーサクセス・企画立案</div>
+                            <div class="worker-tags">
+                                <span class="worker-tag">Canva</span>
+                                <span class="worker-tag">Roblox</span>
+                                <span class="worker-tag">slack</span>
+                            </div>
+                            <div class="worker-message">よろしくお願いいたします。</div>
+                        </div>
+                    </div>
+
+                    <!-- Worker 5 -->
+                    <div class="worker-card">
+                        <div class="worker-card-top header-bg-purple"></div>
+                        <i data-lucide="star" class="worker-star"></i>
+                        <div class="worker-avatar-wrapper">
+                            <!-- Placeholder frog avatar -->
+                            <div class="worker-avatar-img"
+                                style="background: url('https://images.unsplash.com/photo-1598135833441-2b02e6af2b22?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80') center/cover;">
+                            </div>
+                        </div>
+                        <div class="worker-info">
+                            <div class="worker-name">影山 貴久</div>
+                            <div class="worker-role">システム開発部<br>kintone TE</div>
+                            <div class="worker-tags">
+                                <span class="worker-tag">kintone</span>
+                            </div>
+                            <div class="worker-message">kintoneアプリデザインスペシャリスト チャレ中！</div>
+                        </div>
+                    </div>
+
+                    <!-- Worker 6 -->
+                    <div class="worker-card">
+                        <div class="worker-card-top header-bg-indigo"></div>
+                        <i data-lucide="star" class="worker-star"></i>
+                        <div class="worker-avatar-wrapper">
+                            <!-- Placeholder colorful avatar -->
+                            <div class="worker-avatar-img"
+                                style="background: url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80') center/cover;">
+                            </div>
+                        </div>
+                        <div class="worker-info">
+                            <div class="worker-name">日野 夕奈</div>
+                            <div class="worker-role">webマーケティング<br>アートディレクター</div>
+                            <div class="worker-tags">
+                                <span class="worker-tag">その他</span>
+                            </div>
+                            <div class="worker-message">Anthropicの「Coverletter...」...</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Category: お気に入りしたワーカー (Empty placeholder for visual) -->
+            <section class="worker-section">
+                <div class="section-header">
+                    <h2 class="section-title">お気に入りしたワーカー</h2>
+                    <a href="#" class="section-link">全てのお気に入りしたワーカーを見る ></a>
+                </div>
+                <!-- Assuming empty or fewer for layout exactly like mock -->
+                <div class="worker-grid" style="min-height: 100px;">
+                    <!-- Intentionally left blank or can add later based on user interaction -->
+                </div>
+            </section>
+
+            <!-- Category: 稼働したことがあるワーカー (Empty placeholder for visual) -->
+            <section class="worker-section">
+                <div class="section-header">
+                    <h2 class="section-title">稼働したことがあるワーカー</h2>
+                    <a href="#" class="section-link">全ての稼働したワーカーを見る ></a>
+                </div>
+                <div class="worker-grid" style="min-height: 100px;">
+                </div>
+            </section>
+
+            <!-- Category: 過去に閲覧したワーカー -->
+            <section class="worker-section">
+                <div class="section-header">
+                    <h2 class="section-title">過去に閲覧したワーカー</h2>
+                </div>
+                <div class="worker-grid">
+                    <!-- Worker duplicate 4 -->
+                    <div class="worker-card">
+                        <div class="worker-card-top header-bg-blue"></div>
+                        <i data-lucide="star" class="worker-star"></i>
+                        <div class="worker-avatar-wrapper">
+                            <img src="https://i.pravatar.cc/150?img=12" alt="Takahashi" class="worker-avatar-img">
+                        </div>
+                        <div class="worker-info">
+                            <div class="worker-name">高橋 隼斗</div>
+                            <div class="worker-role">PARK事業部<br>カスタマーサクセス・企画立案</div>
+                            <div class="worker-tags">
+                                <span class="worker-tag">Canva</span>
+                                <span class="worker-tag">Roblox</span>
+                                <span class="worker-tag">slack</span>
+                            </div>
+                            <div class="worker-message">よろしくお願いいたします。</div>
+                        </div>
+                    </div>
+
+                    <!-- Worker duplicate 1 -->
+                    <div class="worker-card">
+                        <div class="worker-card-top header-bg-blue"></div>
+                        <i data-lucide="star" class="worker-star"></i>
+                        <div class="worker-avatar-wrapper">
+                            <img src="https://i.pravatar.cc/150?img=11" alt="Sekiguchi" class="worker-avatar-img">
+                        </div>
+                        <div class="worker-info">
+                            <div class="worker-name">関口 茂</div>
+                            <div class="worker-role">PARK事業部<br>新規事業開発部室</div>
+                            <div class="worker-tags">
+                                <span class="worker-tag">Instagram</span>
+                                <span class="worker-tag">ChatGPT</span>
+                                <span class="worker-tag">CRM管理</span>
+                            </div>
+                            <div class="worker-message">神業で作業できることは自社サービス...</div>
+                        </div>
+                    </div>
+
+                    <!-- Worker duplicate 5 -->
+                    <div class="worker-card">
+                        <div class="worker-card-top header-bg-purple"></div>
+                        <i data-lucide="star" class="worker-star"></i>
+                        <div class="worker-avatar-wrapper">
+                            <div class="worker-avatar-img"
+                                style="background: url('https://images.unsplash.com/photo-1598135833441-2b02e6af2b22?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80') center/cover;">
+                            </div>
+                        </div>
+                        <div class="worker-info">
+                            <div class="worker-name">影山 貴久</div>
+                            <div class="worker-role">システム開発部<br>kintone TE</div>
+                            <div class="worker-tags">
+                                <span class="worker-tag">kintone</span>
+                            </div>
+                            <div class="worker-message">kintoneアプリデザインスペシャリスト チャレ中！</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Global Action Button -->
+            <div class="btn-view-all-container">
+                <button class="btn-view-all">全てのワーカーを見る</button>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Chat Floater -->
+    <div class="chat-floater">
+        <i data-lucide="message-circle" class="icon-md" style="color: white;"></i>
+    </div>
+
+    <!-- Minimal footer logic -->
+    <footer
+        style="margin-top: 4rem; padding: 2rem; text-align: center; color: var(--text-muted); font-size: 13px; border-top: 1px solid var(--border-color);">
+        <div
+            style="display: flex; gap: 1.5rem; justify-content: center; margin-bottom: 0.5rem; color: #1e1e1e; font-weight: 500;">
+            <a href="#" style="color: inherit; text-decoration: none;">利用規約</a>
+            <a href="#" style="color: inherit; text-decoration: none;">プライバシーポリシー</a>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
